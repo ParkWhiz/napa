@@ -1,6 +1,6 @@
 require 'roar/decorator'
-require 'roar/representer/json'
-require 'roar/representer/feature/coercion'
+require 'roar/json'
+require 'roar/coercion'
 
 module Napa
   class Representer < Roar::Decorator
