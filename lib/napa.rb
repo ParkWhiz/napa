@@ -7,6 +7,8 @@ require 'grape'
 require 'grape-entity'
 require 'json'
 require 'indefinite_article'
+require 'roar/json/hal'
+require 'roar/json/json_api'
 
 # require internal files
 require 'napa/setup'

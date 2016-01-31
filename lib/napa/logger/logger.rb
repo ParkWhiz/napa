@@ -7,13 +7,17 @@ module Napa
         [Napa::Identity.name, Napa::LogTransaction.id].join('-')
       end
 
+      def timestamp
+        Time.now.to_s
+      end
+
       def config
         @config ||= Napa::Logger::Configuration.new
       end
 
       def logger
         unless @logger
-          @logger = Logging.logger["[#{name}]"]
+          @logger = Logging.logger["[#{name}] [#{timestamp}]"]
           Napa::Logger::Output::Stdout.new
           Napa::Logger::Output::File.new
         end
