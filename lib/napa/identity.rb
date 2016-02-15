@@ -20,11 +20,12 @@ module Napa
     end
 
     def self.revision
-      @revision ||= if Napa.heroku?
-                      File.exist?('.gitsha') ? File.read('.gitsha').gsub(/[^0-9a-z ]/i, '') : ''
-                    else
-                      `git rev-parse HEAD`.strip
-                    end
+      # @revision ||= if Napa.heroku?
+      #                 File.exist?('.gitsha') ? File.read('.gitsha').gsub(/[^0-9a-z ]/i, '') : ''
+      #               else
+      #                 `git rev-parse HEAD`.strip
+      #               end
+      1
     end
 
     def self.pid
