@@ -10,7 +10,7 @@ module Napa
         exit = '... Napa server exited!'
 
         begin
-          PTY.spawn('passenger') do |stdout, _stdin, pid|
+          PTY.spawn('shotgun') do |stdout, _stdin, pid|
             begin
               Signal.trap('INT') { Process.kill('INT', pid) }
               stdout.each { |line| puts line }
