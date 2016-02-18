@@ -31,13 +31,13 @@ module Napa
 
 
       no_commands {  alias_method :app_name, :name }
+      no_commands do
         alias_method :app_path, :path
 
         def postgres?
           %w(pg postgres).include?(options[:database])
         end
-
-      }
+end
     end
   end
 end
