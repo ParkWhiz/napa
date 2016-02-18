@@ -27,10 +27,10 @@ module Napa
         say 'Done!', :green
       end
 
-      no_commands {
+      no_commands { attr_reader :name, :path }
 
-        attr_reader :name, :path
-        alias_method :app_name, :name
+
+      no_commands {  alias_method :app_name, :name }
         alias_method :app_path, :path
 
         def postgres?
