@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'logging'
   gem.add_dependency 'logger'
   gem.add_dependency 'lograge'
-  gem.add_dependency 'dotenv'
+  gem.add_dependency 'dotenv', '~> 2.0.2'
   gem.add_dependency 'octokit', '~> 3.5.0'
   gem.add_dependency 'thor', '~> 0.19.0'
   gem.add_dependency 'virtus', '~> 1.0'
