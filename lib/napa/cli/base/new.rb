@@ -27,7 +27,7 @@ module Napa
         say 'Done!', :green
       end
 
-      no_commands do
+      no_commands {
 
         attr_reader :name, :path
         alias_method :app_name, :name
@@ -37,7 +37,7 @@ module Napa
           %w(pg postgres).include?(options[:database])
         end
 
-      end
+      }
     end
   end
 end
