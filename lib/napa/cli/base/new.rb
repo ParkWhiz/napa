@@ -30,9 +30,12 @@ module Napa
       no_commands do
 
         attr_reader :name, :path
+        desc "Alias app_name to name"
         alias_method :app_name, :name
+        desc "Alias app_path to path"
         alias_method :app_path, :path
 
+        desc "Check if running on postgres"
         def postgres?
           %w(pg postgres).include?(options[:database])
         end
