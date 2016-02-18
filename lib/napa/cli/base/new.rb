@@ -28,10 +28,8 @@ module Napa
       end
 
       no_commands { attr_reader :name, :path }
-
-
-      no_commands {  alias_method :app_name, :name }
-      no_commands {  alias_method :app_path, :path }
+      no_commands { alias_method :app_name, :name }
+      no_commands { alias_method :app_path, :path }
 
       no_commands do
         def postgres?

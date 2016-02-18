@@ -16,22 +16,25 @@ module Napa
         say 'Done!', :green
       end
 
+
+      no_commands { attr_reader :name }
+
       no_commands do
-
-        attr_reader :name
-
         def name_underscore
           name.underscore
         end
+      end
 
+      no_commands do
         def name_tableize
           name.tableize
         end
+      end
 
+      no_commands do
         def output_directory
           '.'
         end
-
       end
     end
   end
